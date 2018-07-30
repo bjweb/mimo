@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/demande"
+        android:orderInCategory="100"
+        android:title="Historique Demandes"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/offre"
+        android:orderInCategory="100"
+        android:title="Historique Offres"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/achat"
+        android:orderInCategory="100"
+        android:title="Historique Achats"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/deco"
+        android:orderInCategory="100"
+        android:title="Deconnexion"
+        app:showAsAction="never" />
+</menu>

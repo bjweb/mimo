@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.modules.jules.microcredit.Connexion">
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/mimio"/>
+
+        <TextView
+            android:layout_marginTop="7dp"
+            android:textAlignment="center"
+            android:id="@+id/info_profil_insc"
+            android:text="Veuillez rentrer vos informations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:hint="Email"
+            android:layout_marginTop="10dp"
+            android:id="@+id/email_input"
+            android:inputType="textEmailAddress"
+            android:layout_marginRight="18dp"
+            android:layout_marginLeft="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <EditText
+            android:hint="Telephone"
+            android:inputType="phone"
+            android:layout_marginTop="10dp"
+            android:id="@+id/phone_input"
+            android:padding="10dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginLeft="18dp"
+            android:textSize="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/cancel_insc"
+                android:id="@+id/next_ins"
+                android:text="connexion"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/white"
+                android:background="@color/colorPrimaryDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <Button
+                android:layout_marginTop="10dp"
+                android:id="@+id/cancel_insc"
+                android:text="Pas encore inscrit ? inscrivez vous"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/white"
+                android:layout_marginRight="20dp"
+                android:background="@color/colorPrimaryDark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/bottom_info"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:text="Micro Crédit Gabon"
+        android:textSize="18dp"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

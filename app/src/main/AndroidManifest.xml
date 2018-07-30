@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.modules.jules.microcredit">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+
+    <application
+        android:name=".AppController"
+        android:allowBackup="true"
+        android:icon="@drawable/mimio"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SlashScreen"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <receiver android:name=".SmsFiltre"
+            android:permission="android.permission.BROADCAST_SMS">
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".InscriptionScreen"
+            android:label="Inscription" />
+        <activity
+            android:name=".InscriptionScreen2"
+            android:label="Inscription" />
+        <activity
+            android:name=".ContratScreen"
+            android:label="Contrat" />
+        <activity
+            android:name=".MenuScreen"
+            android:label="Menu" />
+        <activity
+            android:name=".OfferScreenPub"
+            android:label="Offre" />
+        <activity
+            android:name=".ListOfferScreen"
+            android:label="Offres" />
+        <activity
+            android:name=".DemandScreen"
+            android:label="Demande" />
+        <activity
+            android:name=".OprationScreen"
+            android:label="Opération" />
+        <activity
+            android:name=".Achat"
+            android:label="Achat" />
+        <activity
+            android:name=".Achat2"
+            android:label="Achat" />
+        <activity
+            android:name=".Achat3"
+            android:label="Achat" />
+        <activity
+            android:name=".Achat4"
+            android:label="Achat" />
+        <activity
+            android:name=".Histo_Achat"
+            android:label="Historique Achat" />
+        <activity
+            android:name=".Meilleur_Achat"
+            android:label="Achat" />
+        <activity
+            android:name=".Affiche_achat"
+            android:label="Achat" />
+        <activity
+            android:name=".DemanderArgent"
+            android:label="Demander" />
+        <activity
+            android:name=".OffreArgent"
+            android:label="Offre" />
+        <activity
+            android:name=".Connexion"
+            android:label="Connexion" />
+        <activity
+            android:name=".Histo_demande"
+            android:label="Historique demande" />
+        <activity
+            android:name=".Histo_Offre"
+            android:label="Historique offre" />
+
+        <service android:name=".FirebaseIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".FirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".MontantCaution" />
+        <activity android:name=".Attente" />
+        <activity android:name=".Code">
+        </activity>
+    </application>
+
+</manifest>
